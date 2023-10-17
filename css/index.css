@@ -1,3 +1,50 @@
+/* EXTERNALS */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css');
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css');
+
+/* MISCELANEOUS */
+
+@import url('./misc/variables.css');
+@import url('./misc/normalize.css');
+@import url('./misc/helpers.css');
+@import url('./misc/animations.css');
+
+/* PARTIALS */
+
+@import url('./partials/header.css');
+@import url('./partials/footer.css');
+
+/* COMPONENTS */
+
+@import url('./components/buttons.css');
+@import url('./components/form.css');
+@import url('./components/card.css');
+@import url('./components/slider.css');
+
+/* PAGES */
+
+@import url('./pages/home.css');
+@import url('./pages/shop.css');
+@import url('./pages/item.css');
+@import url('./pages/admin.css');
+@import url('./pages/login.css');
+@import url('./pages/register.css');
+@import url('./pages/create.css');
+@import url('./pages/edit.css');
+
+
+
+
+
+
+
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Raleway:wght@300&display=swap');
 
 
@@ -313,7 +360,7 @@ header {
     position: relative;
 }
 
-.card-item__tag{
+.card-item__tag {
     font-size: var(--font-xsmall);
     text-transform: uppercase;
     background-color: var(--primary-solid);
@@ -324,13 +371,14 @@ header {
 }
 
 
-.card-item__cover img{
+.card-item__cover img {
     animation: fade .7s;
 }
 
 .card-item__img--back {
     display: none;
 }
+
 .card-item__cover:hover .card-item__img--back {
     display: block;
 }
@@ -370,12 +418,12 @@ header {
 
 /*FOOTER*/
 
-footer{
+footer {
     background-color: var(--dark-bg-solid);
     padding: var(--spacing-68);
 }
 
-.footer__copy{
+.footer__copy {
     margin-top: var(--spacing-36);
     text-align: center;
     font-size: var(--font-medium);
@@ -383,12 +431,28 @@ footer{
 
 
 /* ANIMATIONS*/
-@keyframes fade{
-    0%{
+@keyframes fade {
+    0% {
         opacity: 0;
     }
 
-    100%{
+    100% {
         opacity: 1;
+    }
+}
+
+
+/* MEDIAS QUERIES*/
+
+@media (max-width: 802px) {
+    .navbar {
+        justify-content: center;
+        gap: var(--spacing-20);
+    }
+}
+
+@media (max-width: 478px) {
+    .navbar__menu {
+        display: none;
     }
 }
