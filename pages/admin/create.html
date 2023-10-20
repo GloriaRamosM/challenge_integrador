@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Home | Funkoshop</title>
     <link rel="stylesheet" href="../../css/index.css">
 </head>
+
 <body class="grid-fixed">
     <header class="page-header"> <!-- Inicio Header -->
 
@@ -14,12 +16,14 @@
         <nav class="navbar container">
             <picture class="nabvar__logo">
                 <a href="../../index.html">
-                    <img src="../../img/multimedia/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop">
+                    <img src="../../img/multimedia/branding/logo_light_horizontal.svg"
+                        alt="Isologotipo de la Marca Funkoshop">
                 </a>
             </picture>
             <ul class="navbar__menu">
                 <li class="navbar__item with-submenu">
-                    <a class="navbar__link with-icon" href="../shop/shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                    <a class="navbar__link with-icon" href="../shop/shop.html">SHOP<iconify-icon
+                            icon="tabler:chevron-down"></iconify-icon></a>
                     <ul class="submenu">
                         <li class="submenu__item">
                             <a href="" class="submenu__link">Funkos</a>
@@ -47,7 +51,7 @@
         </nav>
     </header> <!--   Fin Header -->
 
-    
+
     <main id="create" class="container">
         <h2 class="create__title">CREAR NUEVO ITEM</h2>
         <form class="create__form" action="/admin/create" method="POST" enctype="application/x-www-form-urlencoded">
@@ -73,10 +77,12 @@
             </div>
             <div class="form__box--flex">
                 <label class="form__label" for="name">Nombre del producto:</label>
-                <input class="form__input" type="text" name="name" id="name" placeholder="Kakashi Hatake Shippuden Saga" required>
+                <input class="form__input" type="text" name="name" id="name" placeholder="Kakashi Hatake Shippuden Saga"
+                    required>
             </div>
             <div>
-                <textarea name="description" id="description" cols="30" rows="10" placeholder="Descripción del producto" required></textarea>
+                <textarea name="description" id="description" cols="30" rows="10" placeholder="Descripción del producto"
+                    required></textarea>
             </div>
             <div class="form__flex">
                 <div class="form__box--flex">
@@ -85,17 +91,20 @@
                 </div>
                 <div class="form__box--flex">
                     <label class="form__label" for="price">Precio:</label>
-                    <div class="form__input--wrapper"><span>$</span><input class="form__input" type="text" name="price" id="price" data-type="currency" placeholder="0.000,00"></div>
+                    <div class="form__input--wrapper"><span>$</span><input class="form__input" type="text" name="price"
+                            id="price" data-type="currency" placeholder="0.000,00"></div>
                 </div>
                 <div class="form__box--flex">
                     <label class="form__label" for="stock">Stock:</label>
-                    <div class="form__input--wrapper"><input class="form__input" type="text" name="stock" id="stock" placeholder="0" required><span>unidades</span></div>
+                    <div class="form__input--wrapper"><input class="form__input" type="text" name="stock" id="stock"
+                            placeholder="0" required><span>unidades</span></div>
                 </div>
             </div>
             <div class="form__flex">
                 <div class="form__box--flex">
                     <label class="form__label" for="discount">Descuento:</label>
-                    <div class="form__input--wrapper"><input class="form__input" type="text" name="discount" id="discount" placeholder="0" required><span>%</span></div>
+                    <div class="form__input--wrapper"><input class="form__input" type="text" name="discount"
+                            id="discount" placeholder="0" required><span>%</span></div>
                 </div>
                 <div class="form__box--flex">
                     <label class="form__label" for="dues">Cuotas:</label>
@@ -133,7 +142,7 @@
                     <a class="navbar__link" href="./pages/admin/login.html">LOGIN</a>
                 </li>
                 <li class="navbar__item">
-                    <a class="navbar__link" href="./pages/contact.html">CONTACTO</a>
+                    <a class="navbar__link" href="../shop/contacto.html">CONTACTO</a>
                 </li>
             </ul>
             <picture>
@@ -144,4 +153,5 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 </body>
+
 </html>
