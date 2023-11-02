@@ -49,11 +49,104 @@
     </nav>
     </header> <!--   Fin Header -->
 
-    <main class="container">
+    <section class="container">
+        <div class="container__table">
+            <div class="table__titulo">
+                <h2 class="table__titulo--">CARRITO DE COMPRAS</h2>
+            </div>
+            <div class="table__group">
+                <div class="table__header">DETALLE DE PRODUCTO</div>
+                <div class="table__header">CANTIDAD</div>
+                <div class="table__header">TOTAL</div>
+                <div class="table__header"></div>
+                <div class="table__item">
+                    <div class="item_card">
+                        <img src="img/pokemon/pidgeotto-1.webp" alt="">
+                        <div class="item_card_info">
+                            <h4 class="item_card_nombre">PIDGEOTTO</h4>
+                            <p class="item_card_licencia">POKEMON</p>
+                            <br>
+                            <p class="item_card_precio">Precio unitario: $ 1799,99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__item">
+                    <form class="item__cart" action="#" method="POST" enctype="application/x-www-form-urlencoded">
+                        <input id="quantity" class="item__input" type="text" name="quantity" placeholder="0" disabled>
+                        <div>
+
+                            <button id="add" class="item__quantity_tabla" type="button">+</button>
+                            <button id="subtract" class="item__quantity_tabla" type="button">-</button>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="table__item">
+                    <p id="total" class="item_precio">$ 0,00</p>
+                </div>
+                <div class="table__item">
+                    <a href="" class="item_compra"><iconify-icon
+                            icon="material-symbols:cancel-outline-rounded"></iconify-icon></a>
+                </div>
 
 
+                <div class="table__item">
+                    <div class="item_card">
+                        <img src="img/star-wars/baby-yoda-1.webp" alt="">
+                        <div class="item_card_info">
+                            <h4 class="item_card_nombre">BABY YODA BLUEBALL </h4>
+                            <p class="item_card_licencia">STAR WARS</p>
+                            <br>
+                            <p class="item_card_precio">Precio unitario: $ 1799,99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__item">
+                    <form class="item__cart" action="#" method="POST" enctype="application/x-www-form-urlencoded">
+                        <input id="quantity" class="item__input" type="text" name="quantity" placeholder="0" disabled>
+                        <div>
 
-    </main>
+                            <button id="add" class="item__quantity_tabla" type="button">+</button>
+                            <button id="subtract" class="item__quantity_tabla" type="button">-</button>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="table__item">
+                    <p id="total" class="item_precio">$ 0,00</p>
+                </div>
+                <div class="table__item">
+                    <a href="" class="item_compra"><iconify-icon
+                            icon="material-symbols:cancel-outline-rounded"></iconify-icon></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="container resumen">
+        <h2 class="resumen__titulo">RESUMEN</h2>
+        <article class="resumen__container">
+            <div class="resumen__cantidad">
+                <p>cantidad de elementos </p>
+                <p id="cantProd"> </p>
+            </div>
+            <div class="resumen__subtotal">
+                <p>subtotal</p>
+                <p id="subTotal"></p>
+            </div>
+            <div class="resumen__envio">
+                <p>envio</p>
+                <p>$0</p>
+            </div>
+            <div class="resumen__total">
+                <p class="resumen__total__titulo">total</p>
+                <p id="totalAPagar"></p>
+            </div>
+        </article>
+        <div class="pagar">
+            <button id="btnPagar">ir a pagar</button>
+        </div>
+    </section>
 
     <footer class="footer">
         <nav class="navbar container">
