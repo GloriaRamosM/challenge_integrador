@@ -7,6 +7,9 @@ const authRoutes = require("./src/routes/authRoutes");
 
 app.use(express.static("public"));
 
+app.use(express.urlencoded());
+app.use(express.json());
+
 app.use("/", mainRoutes);
 app.use("/shop", shopRoutes);
 app.use("/admin", adminRoutes);
