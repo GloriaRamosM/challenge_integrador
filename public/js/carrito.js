@@ -1,6 +1,3 @@
-const add = document.querySelector("#add");
-const subtract = document.querySelector("#subtract");
-const quantity = document.querySelector("#quantity");
 const total = document.querySelector("#total");
 const totalAPagar = document.querySelector("#totalAPagar");
 const subTotal = document.querySelector("#subTotal");
@@ -9,7 +6,12 @@ const nCantidad = document.querySelector("#cantidadCarrito");
 let cont = 0;
 let precio = 1799.99;
 
-add.addEventListener("click", () => {
+const allquantity = document.querySelectorAll("#quantity");
+
+console.log(allquantity.values);
+
+const addquantity = (quantityid) => {
+  const quantity = document.getElementById(quantityid);
   quantity.value = Number(quantity.value) + 1;
   if (quantity.value > 0) {
     cont++;
@@ -22,9 +24,10 @@ add.addEventListener("click", () => {
   }
   console.log("Total actualizado: " + total.textContent);
   console.log("Total : " + totalAPagar.textContent);
-});
+};
 
-subtract.addEventListener("click", () => {
+const subtractquantity = (quantityid) => {
+  const quantity = document.getElementById(quantityid);
   if (quantity.value > 0) {
     quantity.value = Number(quantity.value) - 1;
     cont--;
@@ -34,12 +37,10 @@ subtract.addEventListener("click", () => {
     subTotal.textContent = `$ ${totalPrecio.toFixed(2)}`;
     cantidad.textContent = cont;
     nCantidad.textContent = cont;
-  } else if (quantity.value == 1) {
-    quantity.value = 0;
-    total.textContent = `$ ${precio * cont}`;
   }
+
   console.log("Total actualizado: " + total.textContent);
-});
+};
 
 const btnPagar = document.querySelector("#btnPagar");
 

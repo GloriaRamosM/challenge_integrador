@@ -73,11 +73,13 @@
                 </div>
                 <div class="table__item">
                     <form class="item__cart" action="#" method="POST" enctype="application/x-www-form-urlencoded">
-                        <input id="quantity" class="item__input" type="text" name="quantity" placeholder="0" disabled>
+                        <input id="quantity1" class="item__input" type="text" name="quantity" placeholder="0" disabled>
                         <div>
 
-                            <button id="add" class="item__quantity_tabla" type="button">+</button>
-                            <button id="subtract" class="item__quantity_tabla" type="button">-</button>
+                            <button onclick="addquantity('quantity1')" id="add" class="item__quantity_tabla"
+                                type="button">+</button>
+                            <button onclick="subtractquantity('quantity1')" id="subtract" class="item__quantity_tabla"
+                                type="button">-</button>
                         </div>
 
                     </form>
@@ -104,11 +106,13 @@
                 </div>
                 <div class="table__item">
                     <form class="item__cart" action="#" method="POST" enctype="application/x-www-form-urlencoded">
-                        <input id="quantity" class="item__input" type="text" name="quantity" placeholder="0" disabled>
+                        <input id="quantity2" class="item__input" type="text" name="quantity" placeholder="0" disabled>
                         <div>
 
-                            <button id="add" class="item__quantity_tabla" type="button">+</button>
-                            <button id="subtract" class="item__quantity_tabla" type="button">-</button>
+                            <button onclick="addquantity('quantity2')" id="add" class="item__quantity_tabla"
+                                type="button">+</button>
+                            <button onclick="subtractquantity('quantity2')" id="subtract" class="item__quantity_tabla"
+                                type="button">-</button>
                         </div>
 
                     </form>
