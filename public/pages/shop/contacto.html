@@ -49,14 +49,27 @@
     </nav>
     </header> <!--   Fin Header -->
 
-    <main class="container">
 
-        <h1> Contacto, aca profe no se si va un formulario ??
-            ?
-        </h1>
 
+    <main id="contactf" class="container">
+        <h1 class="login__title"> INGRESA TUS DATOS</h1>
+        <form class="contact__form" onsubmit="submitForm(event)">
+            <label for="nombre" class="text-form">NOMBRE</label>
+            <input class="form__input" type="text" id="nombre" name="nombre" rsequired placeholder="Maria">
+
+            <label for="email" class="text-form">EMAIL</label>
+            <input class="form__input" type="email" id="email" name="email" required placeholder="maria@example.com">
+
+            <label for="mensaje" class="text-form">MENSAJE</label>
+            <textarea class="form__input" id="mensaje" name="mensaje" rows="4" required
+                placeholder="Hola! me gustaria recibir informacion"></textarea>
+
+            <button class="btn-form" type="submit">Enviar</button>
+        </form>
 
     </main>
+
+    </>
 
 
 
@@ -85,7 +98,7 @@
     </footer>
 
 
-    <script src="" async defer></script>
+    <script src="/public/js/formulario.js" async defer></script>
     </body>
 
 </html>
