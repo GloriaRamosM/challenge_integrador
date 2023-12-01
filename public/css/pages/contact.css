@@ -44,11 +44,10 @@ textarea {
 }
 
 .contact__form{
-    margin-right: 50px;
-    margin-left: 20px;
+    margin: auto;
     display: flex;
     flex-direction: column;
-    
+    justify-content: center;
     align-items: stretch;
     gap: var(--spacing-28); 
 }
