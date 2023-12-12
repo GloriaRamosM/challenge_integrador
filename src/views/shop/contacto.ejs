@@ -53,20 +53,19 @@
 
     <main id="contactf" class="container">
         <h1 class="login__title"> INGRESA TUS DATOS</h1>
-        <form class="contact__form" onsubmit="submitForm(event)">
+        <form id="myForm" class="contact__form">
             <label for="nombre" class="text-form">NOMBRE</label>
-            <input class="form__input" type="text" id="nombre" name="nombre" rsequired placeholder="Maria">
+            <input class="form__input" type="text" id="nombre" name="nombre" required placeholder="Maria">
 
             <label for="email" class="text-form">EMAIL</label>
             <input class="form__input" type="email" id="email" name="email" required placeholder="maria@example.com">
 
             <label for="mensaje" class="text-form">MENSAJE</label>
             <textarea class="form__input" id="mensaje" name="mensaje" rows="4" required
-                placeholder="Hola! me gustaria recibir informacion"></textarea>
+                placeholder="Hola! me gustaría recibir información"></textarea>
 
-            <button class="btn-form" type="submit">Enviar</button>
+            <button id="submitButton" class="btn-form" type="submit">Enviar</button>
         </form>
-
     </main>
 
     </>

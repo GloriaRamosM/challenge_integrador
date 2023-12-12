@@ -13,3 +13,6 @@ const submitForm = (event) => {
 
   // Puedes agregar aquí el código para enviar los datos a un servidor mediante AJAX, por ejemplo.
 };
+
+// Usar addEventListener para manejar el evento click del botón
+document.getElementById("submitButton").addEventListener("click", submitForm);

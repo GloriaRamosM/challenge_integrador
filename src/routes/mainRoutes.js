@@ -1,10 +1,16 @@
 const express = require("express");
 const rout = express.Router();
-const mainControllers = require("../controllers/mainControllers");
+const {
+  home,
+  contact,
+  about,
+  faqs,
+} = require("../controllers/mainControllers");
 
-rout.get("/home", mainControllers.home);
-rout.get("/contact", mainControllers.contact);
-rout.get("/about", mainControllers.about);
-rout.get("/faqs", mainControllers.faqs);
+rout.get("/home", home);
+rout.get("/", home);
+rout.get("/contact", contact);
+rout.get("/about", about);
+rout.get("/faqs", faqs);
 
 module.exports = rout;
