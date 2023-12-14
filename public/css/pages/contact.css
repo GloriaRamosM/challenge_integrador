@@ -18,6 +18,7 @@ textarea {
   padding: 15px;
   margin-bottom: 16px;
   box-sizing: border-box;
+  resize: none;
 }
 
 .btn-form {
@@ -46,4 +47,14 @@ textarea {
   justify-content: center;
   align-items: stretch;
   gap: var(--spacing-28);
+}
+
+.bodyContact {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContact {
+  flex: 1;
 }

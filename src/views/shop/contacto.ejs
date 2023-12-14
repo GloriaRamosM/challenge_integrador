@@ -9,36 +9,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../css/index.css"">
     </head>
-    <body>
-        <%- include('../partials/header.ejs') %>
+    <body class=" bodyContact">
+    <%- include('../partials/header.ejs') %>
 
 
-    <main id=" contactf" class="container">
-    <h1 class="login__title"> INGRESA TUS DATOS</h1>
-    <form id="myForm" class="contact__form">
-        <label for="nombre" class="text-form">NOMBRE</label>
-        <input class="form__input" type="text" id="nombre" name="nombre" required placeholder="Maria">
+        <main id=" contactf" class="container mainContact">
+            <h1 class="login__title"> INGRESA TUS DATOS</h1>
+            <form id="myForm" class="contact__form">
+                <label for="nombre" class="text-form">NOMBRE</label>
+                <input class="form__input" type="text" id="nombre" name="nombre" required placeholder="Maria">
 
-        <label for="email" class="text-form">EMAIL</label>
-        <input class="form__input" type="email" id="email" name="email" required placeholder="maria@example.com">
+                <label for="email" class="text-form">EMAIL</label>
+                <input class="form__input" type="email" id="email" name="email" required
+                    placeholder="maria@example.com">
 
-        <label for="mensaje" class="text-form">MENSAJE</label>
-        <textarea class="form__input" id="mensaje" name="mensaje" rows="4" required
-            placeholder="Hola! me gustaría recibir información"></textarea>
+                <label for="mensaje" class="text-form">MENSAJE</label>
+                <textarea class="form__input" id="mensaje" name="mensaje" rows="4" required
+                    placeholder="Hola! me gustaría recibir información"></textarea>
 
-        <button id="submitButton" class="btn-form" type="submit">Enviar</button>
-    </form>
-    </main>
+                <button id="submitButton" class="btn-form" type="submit">Enviar</button>
+            </form>
+        </main>
 
-    </>
-
-
-
-
-    <%- include('../partials/footer.ejs') %>
+        </>
 
 
-        <script src="/public/js/formulario.js" async defer></script>
-        </body>
+
+
+        <%- include('../partials/footer.ejs') %>
+
+
+            <script src="/public/js/formulario.js" async defer></script>
+            </body>
 
 </html>
