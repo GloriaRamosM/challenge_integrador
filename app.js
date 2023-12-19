@@ -7,8 +7,6 @@ const shopRoutes = require("./src/routes/shopRoutes");
 const adminRoutes = require("./src/routes/adminRoutes");
 const authRoutes = require("./src/routes/authRoutes");
 
-//const PORT = process.env.PORT;
-
 // aca estoy usando dotenv para llamar al Port que tengo secreto en ese archivo, y asi no lo escribo aca
 require("dotenv").config();
 
