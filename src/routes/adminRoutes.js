@@ -9,7 +9,7 @@ const {
   deleteItem,
 } = require("../controllers/adminControllers");
 
-rout.get("/admin", admin);
+rout.get("/", admin);
 rout.get("/create", createView);
 rout.post("/create", createItem);
 rout.get("/edit/:id", editView);
