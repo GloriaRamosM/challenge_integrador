@@ -1,5 +1,11 @@
 const path = require("path");
-const { getAll, getOne, create } = require("../models/product.model");
+const {
+  getAll,
+  getOne,
+  create,
+  deleteOne,
+  edit,
+} = require("../models/product.model");
 
 const adminControllers = {
   admin: async (req, res) => {
@@ -22,8 +28,8 @@ const adminControllers = {
       discount: Number(req.body.discount),
       sku: req.body.sku,
       dues: Number(req.body.dues),
-      img_front: req.files[0].originalname,
-      img_back: req.files[1].originalname,
+      img_front: "/products/" + req.files[0].filename,
+      img_back: "/products/" + req.files[1].filename,
       licence_id: Number(req.body.licence),
       category_id: Number(req.body.category),
     };
@@ -41,9 +47,47 @@ const adminControllers = {
       product,
     });
   },
-  editItem: (req, res) => res.send("Route for admin/edit/:id pero put"),
+  editItem: async (req, res) => {
+    const { id } = req.params;
+    const haveImages = req.files.length !== 0;
 
-  deleteItem: (req, res) => res.send("Route for admin delete id view"),
+    const product_schema = haveImages
+      ? {
+          product_name: req.body.name,
+          product_description: req.body.description,
+          price: Number(req.body.price),
+          stock: Number(req.body.stock),
+          discount: Number(req.body.discount),
+          sku: req.body.sku,
+          dues: Number(req.body.dues),
+          img_front: "/products/" + req.files[0].filename,
+          img_back: "/products/" + req.files[1].filename,
+          licence_id: Number(req.body.licence),
+          category_id: Number(req.body.category),
+        }
+      : {
+          product_name: req.body.name,
+          product_description: req.body.description,
+          price: Number(req.body.price),
+          stock: Number(req.body.stock),
+          discount: Number(req.body.discount),
+          sku: req.body.sku,
+          dues: Number(req.body.dues),
+          licence_id: Number(req.body.licence),
+          category_id: Number(req.body.category),
+        };
+
+    await edit(product_schema, { product_id: id });
+
+    res.redirect("/shop");
+  },
+
+  deleteItem: async (req, res) => {
+    const { id } = req.params;
+    await deleteOne({ product_id: id });
+
+    res.redirect("/admin");
+  },
 };
 
 module.exports = adminControllers;

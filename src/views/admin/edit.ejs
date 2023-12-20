@@ -13,11 +13,12 @@
     <%- include('../partials/header.ejs') %>
         <main id="edit">
             <h2 class="edit__title">EDITAR ITEM</h2>
-            <form class="edit__form" action="/admin/edit" method="POST" enctype="application/x-www-form-urlencoded">
+            <form class="edit__form" action="/admin/edit/<%= product.product_id %> ?_method=PUT" method="POST"
+                enctype="multipart/form-data">
                 <div class="form__flex">
                     <div class="form__box--flex">
-                        <label class="form__label" for="collection">Categoría:</label>
-                        <select class="form__select" name="collection" id="collection" required>
+                        <label class="form__label" for="category">Categoría:</label>
+                        <select class="form__select" name="category" id="collection" required>
                             <% if( product.category_id==1) { %>
                                 <option selected value="1">Figuras Coleccionables</option>
                                 <option value="3">Llaveros</option>
@@ -39,8 +40,8 @@
                         </select>
                     </div>
                     <div class="form__box--flex">
-                        <label class="form__label" for="collection">Licencia:</label>
-                        <select class="form__select" name="collection" id="collection" required>
+                        <label class="form__label" for="licence">Licencia:</label>
+                        <select class="form__select" name="licence" id="collection" required>
                             <% if( product.licence_id==2) { %>
                                 <option value="2" selected>Starwars</option>
                                 <option value="3">Pokemon</option>

@@ -42,8 +42,37 @@ const create = async (params) => {
   }
 };
 
+const edit = async (params, id) => {
+  try {
+    const [product] = await conn.query(" UPDATE  product SET ? WHERE ?", [
+      params,
+      id,
+    ]);
+
+    return product;
+  } catch (e) {
+    return { error: true, message: "Hemos encontrado un error: " + e };
+  } finally {
+    conn.releaseConnection();
+  }
+};
+
+const deleteOne = async (params) => {
+  try {
+    const [product] = await conn.query("DELETE FROM product WHERE ?", params);
+
+    return product;
+  } catch (e) {
+    return { error: true, message: "Hemos encontrado un error: " + e };
+  } finally {
+    conn.releaseConnection();
+  }
+};
+
 module.exports = {
   getAll,
   getOne,
   create,
+  edit,
+  deleteOne,
 };

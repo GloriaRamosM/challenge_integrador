@@ -5,14 +5,14 @@ const shopControllers = {
   shop: async (req, res) => {
     const data = await getAll();
 
-    console.log(data);
     res.render(path.resolve(__dirname, "../views/shop/shop.ejs"), {
       data,
     });
   },
   itemId: async (req, res) => {
     const itemId = req.params.id;
-    const [item] = await getOne(itemId);
+    console.log(itemId);
+    const [item] = await getOne({ product_id: itemId });
 
     res.render(path.resolve(__dirname, "../views/shop/item.ejs"), {
       item,

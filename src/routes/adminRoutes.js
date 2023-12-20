@@ -15,7 +15,7 @@ rout.get("/", admin);
 rout.get("/create", createView);
 rout.post("/create", upload.array("images", 2), createItem);
 rout.get("/edit/:id", editView);
-rout.put("/edit/:id", editItem);
+rout.put("/edit/:id", upload.array("images", 2), editItem);
 rout.delete("/delete/:id", deleteItem);
 
 module.exports = rout;
